@@ -1,3 +1,3 @@
 #kokoa Clone 2020 Update
 
-css bacame so much better! 
+HTML & CSS are so much fun! 
