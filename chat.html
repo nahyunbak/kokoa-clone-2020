@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Chats-Kokoa Clone</title>
+    <title>Chat w/IU - Kokoa Clone</title>
 </head>
 <body>
     <!-- 
@@ -44,43 +44,59 @@
         </div>
     </div>
 
-    <header class="screen-header">
-        <h1 class="screen-header__title">Chats</h1>
-        <div class="screen-header__icons">
-            <span><i class="fas fa-search fa-lg"></i></span>
-            <span><i class="far fa-comment-dots fa-lg"></i></span>
-            <span><i class="fas fa-music fa-lg"></i></span>
-            <span><i class="fas fa-cog fa-lg"></i></span>
-        </div>
+    <!--
+        header.alt-header>div.alt-header__column*3
+        탭 키를 누르면 각각의 안을 채울 수 있다.
+        component도 바꿀 수 있다.
+    -->
+    <header>
+        <header class="alt-header">
+            <div class="alt-header__column">
+                <a href="more.html">
+                    <i class="fas fa-angle-left fa-2x"></i>
+                </a>
+            </div>
+            <div class="alt-header__column">
+                <h1 class="alt-header__title">Setting</h1>
+            </div>
+            <div class="alt-header__column">
+                <span><i class="fas fa-search fa-lg"></i></span>
+            </div>
+        </header>
     </header>
+    <!--
+        component에서 사소한 변화가 있을 경우
+        1) modifier를 이용한다 -component 폴더에 파일 넣기
+        2) 클래스를 하나 더 지정한다 - screen폴더에 파일 넣기 
 
+        setting은 ul>?li를 사용한다. 
+
+        묶여있는 것끼리 묶자. 여기서는 아이콘과 메뉴 이름이 div로 묶이고, version이 따로 묶였다.
+    -->
     <main class="main-screen">
-        <a href="chat.html">
-            <div class="user-component">
-                <div class="user-component__column">
-                    <!--
-                        class="user-component__avatar--xl"
-                        위의 클래스는 modifier이다. user-component__avatar과 같지만, 거기에 사이즈의 변형이 있는 것이다.
-                        (css파일에서 확인)
-                    -->
-                    <img src="https://img4.yna.co.kr/photo/cms/2019/05/02/02/PCM20190502000402370_P2.jpg" class="user-component__avatar user-component__avatar"/>
-                    <div class="user-component__text">
-                        <h4 class="user-component__title">아이유</h4>
-                        <h6 class="user-component__subtitle">this is text whatever</h6> 
-                    </div>
+        <ul class="settings-list">
+            <li class="settings-setting">
+                <div class="settings_setting-column">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Notices</span>
                 </div>
-                <div class="user-component__column"></div>
-            </div>
-            <!--
-                friend 스크린 채널을 만들고 있다. 
-                나 같으면 따로 만들 것 같은데, 따로 만들지는 않고 전부 묶음. 
-                이게 더
-            -->
-            <div class="user-component__column">
-                <span class="user-component__time">21:22</span>
-                <span ></span>
-            </div>
-        </a>
+                <div class="settings_setting-column"></div>
+            </li>
+            <li class="settings-setting">
+                <div class="settings_setting-column">
+                    <i class="fas fa-flask"></i>
+                    <span>Kokoa Lab</span>
+                </div>
+                <div class="settings_setting-column"></div>
+            </li>
+            <li class="settings-setting">
+                <div class="settings_setting-column">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Version</span>
+                </div>
+                <div class="settings_setting-column">Latest Version</div>
+            </li>
+        </ul>
     </main>
     
 
@@ -98,7 +114,7 @@
             <li class="nav__btn">
                 <a class="nav__link" href="chats.html">
                     <span class="nav__notification badge">1</span>
-                    <i class="fas fa-comment fa-2x"></i>
+                    <i class="far fa-comment fa-2x"></i>
                 </a>
             </li>
             <li class="nav__btn">

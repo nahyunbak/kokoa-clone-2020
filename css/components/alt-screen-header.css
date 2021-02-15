@@ -1,0 +1,30 @@
+.alt-header{
+    padding: var(--horizontal-space);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+    핵을 쓰자
+    +
+    first-child란 selector의 첫 번째 요소를 의미 (의외로 자식 요소가 아니다)
+*/
+.alt-header__title{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.alt-header__column:first-child{
+    margin-right: auto;
+}
+
+
+.alt-header__column:last-child{
+    margin-left: auto;
+}
+
+.alt-header__column span:last-child{
+
+}
