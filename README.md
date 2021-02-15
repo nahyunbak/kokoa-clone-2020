@@ -1,3 +1,3 @@
 #kokoa Clone 2020 Update
 
-HTML & CSS are so much fun! 
+노마드코더 클론 강의 

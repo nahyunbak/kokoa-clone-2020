@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>More-Kokoa Clone</title>
+</head>
+<body>
+    <!-- 
+        <클래스 작명>
+        맨 위 상태바에는 3개의 column이 있다.
+        그러나 column은 흔한 이름이므로, 다음과 같은 네이밍 컨벤션을 따른다.
+        참고서: https://css-tricks.com/bem-101/
+        참고서2: https://nykim.work/15
+        *모든 요소는 클래스를 사용한다. id 따위 쓰지 말자.
+        *부모 언더바 2개 자식
+        예시: status-bar__column
+    -->
+    <!-- 
+        <아이콘>
+        svg파일 참고사이트(히어로아이콘): https://heroicons.dev/
+        참고사이트(폰트어썸): https://fontawesome.com/ 
+
+    -->
+    <!-- 
+        <클래스 작명 요령>
+        부모 클래스의 이름을 정하고, 이를 바탕으로 자식 클래스의 이름을 정한다.
+
+    -->
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>110%</span>
+            <i class="fas fa-bolt"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <header class="screen-header">
+        <h1 class="screen-header__title">Find</h1>
+        <div class="screen-header__icons">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            <span><i class="fas fa-music fa-lg"></i></span>
+            <span><a href="settings.html"><i class="fas fa-cog fa-lg"></i></a></span>
+        </div>
+    </header>
+    <!--
+        component에서 사소가 변화가 있을 경우
+        1) modifier를 이용한다 -component 폴더에 파일 넣기
+        2) 클래스를 하나 더 지정한다 - screen폴더에 파일 넣기 
+    -->
+    <main class="main-screen more-screen">
+        <div class="user-component">
+            <div class="user-component__column">
+                <!--
+                    class="user-component__avatar--xl"
+                    위의 클래스는 modifier이다. user-component__avatar과 같지만, 거기에 사이즈의 변형이 있는 것이다.
+                    (css파일에서 확인)
+                 -->
+                <img src="https://img4.yna.co.kr/photo/cms/2019/05/02/02/PCM20190502000402370_P2.jpg" class="user-component__avatar user-component__avatar--xl"/>
+                <div class="user-component__text">
+                    <h4 class="user-component__title">아이유</h4>
+                    <h6 class="user-component__subtitle">+82 010 9167 5977</h6>
+                </div>
+            </div>
+            <div class="user-component__column">
+                <i class="far fa-comment-alt fa-2x"></i>
+            </div>
+        </div>
+        <div class="icon-row">
+                <!--
+                    단축키: .find-icons__icon*4>span
+                    **숙제: user component에 margin bottom값 넣기 
+                -->
+                <div class="icon-row__icon">
+                    <i class="far fa-calendar"></i>
+                    <span>Calendar</span>
+                </div>
+                <div class="icon-row__icon">
+                    <i class="far fa-smile-beam"></i>
+                    <span>Emoticons</span>
+                </div>
+                <div class="icon-row__icon">
+                    <i class="fas fa-paint-roller"></i>
+                    <span>Themes</span>
+                </div>
+                <div class="icon-row__icon">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <span>Account</span>
+                </div>
+        </div>
+        <div class="more-suggestions">
+            <h4 class="more-suggestions__title">Suggestions</h4>
+            <div class="more-suggestions__icons">
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-image">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <span class="more-suggestions__icon-text">Kokoa Story</span>
+                </div>
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-image">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <span class="more-suggestions__icon-text">Kokoa Story</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+
+    <!--
+        단축키: nav>ul>li*4>a
+        탭 키를 누르면 각각의 안을 채울 수 있다.
+    -->
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__btn">
+                <a class="nav__link" href="friends.html">
+                    <i class="far fa-user fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="chats.html">
+                    <span class="nav__notification badge">1</span>
+                    <i class="far fa-comment fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="find.html"><i class="fas fa-search fa-2x"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="more.html">
+                    <i class="fas fa-ellipsis-h fa-2x"></i>
+                    <span class="nav__dot"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="https://kit.fontawesome.com/23f3a81e49.js" crossorigin="anonymous"></script>
+</body>
+</html>

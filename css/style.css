@@ -1,11 +1,40 @@
-
+/*
+순서를 지키는 게 중요하다
+*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 @import "reset.css";
 @import "variables.css";
+
 /*Components*/
 @import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
+@import "components/badge.css";
+@import "components/icon-row.css";
+/*screens*/
 @import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+
+/*
+<폰트 사용하기>
+1. 직접 font-family에서 선택하기
+2. 구글폰트 사용하기
+(예시)
+google font: https://fonts.google.com/ 
+*link보다는 import를 추천한다. import위치는 상단.
+*/
+
+
 
 body {
+    color: #2e363e;
     font-family: 'Open Sans', sans-serif;
+    height: 1000vh;
+}
+
+.main-screen{
+    padding: 0px var(--horizontal-space);
 }

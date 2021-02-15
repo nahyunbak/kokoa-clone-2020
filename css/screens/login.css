@@ -1,4 +1,8 @@
 
+/*
+좌우로 놓고 싶다면 flex-direction 을 추가할 필요 없지만, 
+상하로 놓고 싶다면 flex-direction: column을 추가해준다.
+*/
 .welcome-header {
     margin: 90px 0px;
     text-align: center;
@@ -44,6 +48,12 @@
     border-color: var(--yellow);
     transition: border-color 0.3s ease-in-out;
 }
+
+/*
+cursor 참고서:  
+https://ofcourse.kr/css-course/cursor-%EC%86%8D%EC%84%B1
+
+*/
 #login-form input[type="submit"] {
     background-color: var(--yellow);
     cursor: pointer;
@@ -57,3 +67,6 @@
     color: inherit;
     font-size: 13px;
 }
+
+
+

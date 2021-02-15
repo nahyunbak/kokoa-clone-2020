@@ -1,0 +1,24 @@
+.screen-header{
+    display: flex;
+    justify-content: space-between;
+    /*
+        변수를 variables.css에 지정하고, 사용하는 것.
+        왜냐하면 이 padding은 계속 사용될 테니까.
+    */
+    padding: var(--horizontal-space);
+}
+
+/*
+    position으로 정하기 전에, 공통 요소는 가능한 margin과 padding 값을 주는 게 맞다. 
+
+*/
+.screen-header__title{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.screen-header__icons span {
+    margin-left: 20px;
+}
+
+

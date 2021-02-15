@@ -1,14 +1,24 @@
 
+
+/*
+<css 핵 사용하기>
+css hack(justify-content대신사용가능)
+- 레시피 같이 어디든 쓸 수 있다. 이상하지만 작동한다.
+- 1 상위 박스 : justify-content: center; -중앙으로 몰림
+- 2 내부 박스 범위 : width: 33%; -왼쪽으로 몰려서 범위 벌어짐, 왼쪽 위치할 박스는 왼쪽에 붙어서 정렬됨
+- 3 중앙에 위치할 박스 : display: flex; justify-content: center; -중앙에 위치할 박스만 중앙에 위치함
+- 4 오른쪽에 정렬할 박스 : *display*: flex; *justify-content*: flex-end; *align-items*: center; -오른쪽에 붙어서 정렬됨
+
+*/
 .status-bar {
     display: flex;
-    justify-content: center;
-    padding: 5px 3px;
+    justify-content: space-between;
 }
 
 .status-bar__column {
     width: 33%;
 }
-
+/*조정하기*/
 .status-bar__column:first-child span {
     margin-right: 5px;
 }
@@ -18,11 +28,14 @@
     justify-content: center;
 }
 
-.status-bar__column:last-child {
+.status-bar__column:last-child{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
-.status-bar__column .fa-battery-three-quarters {
-    margin: 0px 5px; 
+/*조정하기*/
+.status-bar__column, span, .fa-battery-full {
+    margin: 0px 5px;
 }
+

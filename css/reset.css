@@ -50,3 +50,8 @@ table {
 input:focus {
     outline:none;
 }
+
+/*모든 링크의 색깔을 없애준다 */
+a {
+	color: inherit;
+}
