@@ -64,14 +64,14 @@
     tip: 내부에 있는 요소가 여러개라면 경우에 따라 div 안에 묶는 것도 요령이다. 
 */
 .user-component__column:last-child {
-    color: rgba(0,0,0,0.5);
+    color: rgba(0,0,0,0.4);
     display:flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
 .user-component__time{
-    margin-top: 10px;
+    margin-bottom: 10px;
     display: block;
 }
 

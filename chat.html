@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Chat w/IU - Kokoa Clone</title>
 </head>
-<body>
+<!--
+    매우 다른 요소는 id를 부여한다  
+-->
+<body id="chat-screen">
     <!-- 
         <클래스 작명>
         맨 위 상태바에는 3개의 column이 있다.
@@ -57,10 +60,12 @@
                 </a>
             </div>
             <div class="alt-header__column">
-                <h1 class="alt-header__title">Setting</h1>
+                <h1 class="alt-header__title">아이유</h1>
             </div>
             <div class="alt-header__column">
                 <span><i class="fas fa-search fa-lg"></i></span>
+                <span><i class="fas fa-bars fa-lg"></i></span>
+            
             </div>
         </header>
     </header>
@@ -74,60 +79,9 @@
         묶여있는 것끼리 묶자. 여기서는 아이콘과 메뉴 이름이 div로 묶이고, version이 따로 묶였다.
     -->
     <main class="main-screen">
-        <ul class="settings-list">
-            <li class="settings-setting">
-                <div class="settings_setting-column">
-                    <i class="fas fa-bullhorn"></i>
-                    <span>Notices</span>
-                </div>
-                <div class="settings_setting-column"></div>
-            </li>
-            <li class="settings-setting">
-                <div class="settings_setting-column">
-                    <i class="fas fa-flask"></i>
-                    <span>Kokoa Lab</span>
-                </div>
-                <div class="settings_setting-column"></div>
-            </li>
-            <li class="settings-setting">
-                <div class="settings_setting-column">
-                    <i class="fas fa-info-circle"></i>
-                    <span>Version</span>
-                </div>
-                <div class="settings_setting-column">Latest Version</div>
-            </li>
-        </ul>
+        
     </main>
     
-
-    <!--
-        단축키: nav>ul>li*4>a
-        탭 키를 누르면 각각의 안을 채울 수 있다.
-    -->
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__btn">
-                <a class="nav__link" href="friends.html">
-                    <i class="far fa-user fa-2x"></i>
-                </a>
-            </li>
-            <li class="nav__btn">
-                <a class="nav__link" href="chats.html">
-                    <span class="nav__notification badge">1</span>
-                    <i class="far fa-comment fa-2x"></i>
-                </a>
-            </li>
-            <li class="nav__btn">
-                <a class="nav__link" href="find.html"><i class="fas fa-search fa-2x"></i></a>
-            </li>
-            <li class="nav__btn">
-                <a class="nav__link" href="more.html">
-                    <i class="fas fa-ellipsis-h fa-2x"></i>
-                    <span class="nav__dot"></span>
-                </a>
-            </li>
-        </ul>
-    </nav>
 
     <script src="https://kit.fontawesome.com/23f3a81e49.js" crossorigin="anonymous"></script>
 </body>
