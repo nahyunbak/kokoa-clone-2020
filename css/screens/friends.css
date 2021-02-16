@@ -21,6 +21,10 @@
     color:rgba(0,0,0,0.3);
 }
 
+.friends-screen {
+    padding: 0px var(--horizontal-space);
+  }
+  
 /*
     상위 클래스이기 때문에 friends-screen만 사용하면 되는 것이다.
     mdn padding 자습서: https://developer.mozilla.org/ko/docs/Web/CSS/padding
