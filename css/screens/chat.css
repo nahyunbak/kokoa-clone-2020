@@ -15,8 +15,18 @@
 
 #chat-screen .alt-header{
     top: 10px;
+    z-index: 1;
+}
+
+#chat-screen .status-bar{
+    z-index: 2;
 }
 
 .main-chat{
-    padding-top: 50px;
+    padding-top: 150px;
 }
+
+/*
+    순서를 바꾸기 
+*/
+
