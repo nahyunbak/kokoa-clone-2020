@@ -52,22 +52,34 @@
         탭 키를 누르면 각각의 안을 채울 수 있다.
         component도 바꿀 수 있다.
     -->
-    <header>
-        <header class="alt-header">
-            <div class="alt-header__column">
-                <a href="chats.html">
-                    <i class="fas fa-angle-left fa-2x"></i>
-                </a>
-            </div>
-            <div class="alt-header__column">
-                <h1 class="alt-header__title">아이유</h1>
-            </div>
-            <div class="alt-header__column">
-                <span><i class="fas fa-search fa-lg"></i></span>
-                <span><i class="fas fa-bars fa-lg"></i></span>
-            
-            </div>
-        </header>
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="chats.html">
+          <i class="fas fa-angle-left fa-3x"></i>
+        </a>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">니꼬</h1>
+      </div>
+      <div class="alt-header__column">
+        <span><i class="fas fa-search fa-lg"></i></span>
+        <span><i class="fas fa-bars fa-lg"></i></span>
+      </div>
+    </header>
+    
+    <header class="alt-header">
+        <div class="alt-header__column">
+            <a href="chats.html">
+                <i class="fas fa-angle-left fa-2x"></i>
+            </a>
+        </div>
+        <div class="alt-header__column">
+            <h1 class="alt-header__title">아이유</h1>
+        </div>
+        <div class="alt-header__column">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            <span><i class="fas fa-bars fa-lg"></i></span>   
+        </div>
     </header>
     <!--
         component에서 사소한 변화가 있을 경우
@@ -82,7 +94,47 @@
         <div class="chat__timestamp">
             Tuesday, June 30, 2020
         </div>
+<!--
+    메시지 창의 구조를 분석하는 건 어렵지만, 가로 세로 요소를 구분해 가며 세분화시키면 할만하다.
+-->
+        <div class="message-row">
+            <img src="https://img4.yna.co.kr/photo/cms/2019/05/02/02/PCM20190502000402370_P2.jpg" alt="">
+            <div class="message-row__content">
+                <span class="message__author">Nicolas</span>
+                <div class="message-info">
+                    <span class="message__bubble">Hi</span>
+                    <span class="message__time">21:27</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-row message-row--own">
+            <div class="message-row__content">
+                <div class="message-info">
+                    <span class="message__bubble">Hi</span>
+                    <span class="message__time">21:27</span>
+                </div>
+            </div>
+        </div>
     </main>
+
+<!--
+    키보드 제작하기 
+    1. 가로여도, 세로라고 가정하고 만든다.
+-->
+
+    <form class="reply">
+        <div class="reply__column">
+            <i class="far fa-plus-square"></i>
+        </div>
+        <div class="reply__column">
+            <input type="text" placeholder="Write a message..." />
+            <i class="far fa-smile-wink fa-lg"></i>
+            <button>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </form>
     
 
     <script src="https://kit.fontawesome.com/23f3a81e49.js" crossorigin="anonymous"></script>

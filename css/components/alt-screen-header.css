@@ -10,7 +10,7 @@
     width: 33%;
 }
 /*
-    핵을 쓰자
+    중앙정렬 핵을 쓰자
     +
     first-child란 selector의 첫 번째 요소를 의미 (의외로 자식 요소가 아니다)
 */
@@ -33,7 +33,7 @@
 }
 
 .alt-header__column span:last-child{
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 
