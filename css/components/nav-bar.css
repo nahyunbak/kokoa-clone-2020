@@ -26,6 +26,18 @@
     position: relative;
 }
 
+
+@keyframes notificationAnimation {
+    0%{
+        transform: none;
+    }
+    50%{
+        transform: translateY(-5px) rotateY(360deg);
+    }
+    100% {
+        transform: none;
+    }
+}
 /*
     <border-radius>
     border-radius로 원을 만들고 싶다면 width의 절반 값을 주면 된다. 
@@ -41,10 +53,12 @@
     component만들기: 일부가 다른 경우, 그것만 빼놓은 나머지를 component로 만든다. 
 
 */
+
 .nav__notification{
     position: absolute;
     left: 15px;
     bottom: 15px;
+    animation: notificationAnimation 2s ease-in-out infinite;
 }
 
 .nav__dot{
@@ -58,4 +72,40 @@
     position: absolute;
     top: -15px;
     right: -15px;
+}
+
+@keyframes appearBtnAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/*
+    .nav__btn은 @keyframe을 기억하지 않는다. 
+    그러므로, animation에 forwards를 추가해준다.
+*/
+
+.nav__btn {
+    transform: translateY(50px);
+    opacity: 0;
+    animation: appearBtnAnimation 1s ease-in-out forwards;
+}
+
+/*
+    animation delay를 사용하여 차례대로 나타내자.
+*/
+.nav__btn:nth-child(2){
+    animation-delay: 0.5s;
+}
+
+.nav__btn:nth-child(3){
+    animation-delay: 1s;
+}
+
+.nav__btn:nth-child(4){
+    animation-delay: 1.5s;
 }
