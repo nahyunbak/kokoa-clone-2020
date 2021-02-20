@@ -43,3 +43,34 @@
     justify-content: space-between;
     color: rgba(0,0,0,0.5);
 }
+
+/*
+    애니메이션 만들기 
+
+    1. opacity가 0이 되었다고 해서 완전히 사라지는 건 아니다.
+    2. 이때 사용할 수 있는 것은 visibility: hidden;
+    3. html을 무시하고 싶다면 js를 사용해야 한다.
+*/
+
+@keyframes hideSplashScreen {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+#splash-screen{
+    background-color: var(--yellow);
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 132px;
+    animation: hideSplashScreen 0.4s ease-in-out forwards;
+    animation-delay: 2s;
+}
