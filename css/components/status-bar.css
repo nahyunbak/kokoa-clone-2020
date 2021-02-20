@@ -12,12 +12,14 @@ css hack(justify-content대신사용가능)
 */
 .status-bar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 5px 3px;
 }
 
 .status-bar__column {
     width: 33%;
 }
+
 /*조정하기*/
 .status-bar__column:first-child span {
     margin-right: 5px;
