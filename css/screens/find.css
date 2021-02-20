@@ -124,6 +124,28 @@
 .open-post__heart-count span{
     margin-left: 3px;
 }
+
 /*
-    배경 안에 들어 있는 요소를 배열하기
+    scale: 배로 커지거나 작아지는 것.
+    will-change:브라우저에게 무언가가 바뀔거라고 말해줌. 애니메이션을 향상시켜준다.
+    그래픽카드를 이용
 */
+
+@keyframes heartBeat{
+    0%{
+        color: white;
+        transform: none;
+    }
+    50%{
+        color: tomato;
+        transform: scale(1.5);
+    }
+    100%{
+        colot:white;
+    }
+}
+
+.open-post__heart-count:hover i{
+    will-change: transform;
+    animation: heartBeat 1s linear infinite;
+}
